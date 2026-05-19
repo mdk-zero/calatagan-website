@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Lexend } from "next/font/google";
 import "./globals.css";
 
-const googleSansFlex = localFont({
-  src: "../styles/fonts/GoogleSansFlex-VariableFont_GRAD,ROND,opsz,slnt,wdth,wght.ttf",
+const lexend = Lexend({
+  variable: "--font-lexend",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -17,10 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${googleSansFlex.variable} ${googleSansFlex.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${lexend.variable} ${lexend.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
