@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Google_Sans_Flex } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const googleSansFlex = Google_Sans_Flex({
-  variable: '--font-google-sans-flex',
-  subsets: ['latin'],
+const googleSansFlex = localFont({
+  src: "../styles/fonts/GoogleSansFlex-VariableFont_GRAD,ROND,opsz,slnt,wdth,wght.ttf",
 });
 
 export const metadata: Metadata = {
